@@ -9,7 +9,7 @@ public class DecupareLinie extends Dreptunghi
 {
 	double x1, y1, x2, y2;
 	boolean clippable;
-
+//comment
 	public DecupareLinie(double xx1, double yy1, double xx2, double yy2, double minXX, double minYY,
 			double maxXX, double maxYY)
 	{
@@ -26,12 +26,12 @@ public class DecupareLinie extends Dreptunghi
 			x1 = xx2;
 			y1 = yy2;
 			x2 = xx1;
-			y2 = yy1;			
+			y2 = yy1;
 		}
 		clippable = clip();
 	}
-	
-	
+
+
 	private boolean clip()
 	{
 		double rangeX = x2 - x1;
@@ -54,7 +54,7 @@ public class DecupareLinie extends Dreptunghi
 			double m = rangeY / rangeX;
 			double b = y1 - m * x1;
 			x2 = maxX;
-			y2 = m * x2 + b;				
+			y2 = m * x2 + b;
 		}
 		if (y1 < y2)
 		{
@@ -104,7 +104,7 @@ public class DecupareLinie extends Dreptunghi
 		}
 		return true;
 	}
-	
+
 	public boolean isClippable()
 	{
 		return clippable;
